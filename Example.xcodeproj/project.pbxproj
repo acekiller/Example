@@ -17,6 +17,9 @@
 		4192C252255D71FC008E8BE1 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C251255D71FC008E8BE1 /* ExampleUITests.swift */; };
 		4192C26F255D7A53008E8BE1 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C26E255D7A53008E8BE1 /* Timer.swift */; };
 		4192C274255D7BD7008E8BE1 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C273255D7BD7008E8BE1 /* TimerTests.swift */; };
+		4192C280255D804D008E8BE1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C27F255D804D008E8BE1 /* Network.swift */; };
+		4192C290255D82F5008E8BE1 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C28F255D82F5008E8BE1 /* NetworkTests.swift */; };
+		4192C295255D8350008E8BE1 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C294255D8350008E8BE1 /* APITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		4192C253255D71FC008E8BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4192C26E255D7A53008E8BE1 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		4192C273255D7BD7008E8BE1 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		4192C27F255D804D008E8BE1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4192C28F255D82F5008E8BE1 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		4192C294255D8350008E8BE1 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		4192C22E255D71F9008E8BE1 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				4192C27E255D8033008E8BE1 /* Network */,
 				4192C26D255D7A46008E8BE1 /* Timer */,
 				4192C22F255D71F9008E8BE1 /* AppDelegate.swift */,
 				4192C231255D71F9008E8BE1 /* SceneDelegate.swift */,
@@ -121,6 +128,8 @@
 				4192C246255D71FB008E8BE1 /* ExampleTests.swift */,
 				4192C248255D71FB008E8BE1 /* Info.plist */,
 				4192C273255D7BD7008E8BE1 /* TimerTests.swift */,
+				4192C28F255D82F5008E8BE1 /* NetworkTests.swift */,
+				4192C294255D8350008E8BE1 /* APITests.swift */,
 			);
 			path = ExampleTests;
 			sourceTree = "<group>";
@@ -140,6 +149,14 @@
 				4192C26E255D7A53008E8BE1 /* Timer.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		4192C27E255D8033008E8BE1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4192C27F255D804D008E8BE1 /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4192C280255D804D008E8BE1 /* Network.swift in Sources */,
 				4192C234255D71F9008E8BE1 /* ViewController.swift in Sources */,
 				4192C230255D71F9008E8BE1 /* AppDelegate.swift in Sources */,
 				4192C232255D71F9008E8BE1 /* SceneDelegate.swift in Sources */,
@@ -304,7 +322,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4192C290255D82F5008E8BE1 /* NetworkTests.swift in Sources */,
 				4192C247255D71FB008E8BE1 /* ExampleTests.swift in Sources */,
+				4192C295255D8350008E8BE1 /* APITests.swift in Sources */,
 				4192C274255D7BD7008E8BE1 /* TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
