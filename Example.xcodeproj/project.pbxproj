@@ -26,6 +26,7 @@
 		4192C290255D82F5008E8BE1 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C28F255D82F5008E8BE1 /* NetworkTests.swift */; };
 		4192C295255D8350008E8BE1 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C294255D8350008E8BE1 /* APITests.swift */; };
 		41AF3B62255F3C4100EF58B5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3B61255F3C4100EF58B5 /* Util.swift */; };
+		41AF3B72255F528900EF58B5 /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3B71255F528900EF58B5 /* HistoryListViewController.swift */; };
 		41AF3B7F255F534200EF58B5 /* RequestHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3B7E255F534200EF58B5 /* RequestHistory.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		4192C28F255D82F5008E8BE1 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		4192C294255D8350008E8BE1 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		41AF3B61255F3C4100EF58B5 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		41AF3B71255F528900EF58B5 /* HistoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListViewController.swift; sourceTree = "<group>"; };
 		41AF3B7E255F534200EF58B5 /* RequestHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				4192C23A255D71FB008E8BE1 /* LaunchScreen.storyboard */,
 				4192C23D255D71FB008E8BE1 /* Info.plist */,
 				41AF3B61255F3C4100EF58B5 /* Util.swift */,
+				41AF3B71255F528900EF58B5 /* HistoryListViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41174806255ECF30004D4394 /* TableCoding.swift in Sources */,
+				41AF3B72255F528900EF58B5 /* HistoryListViewController.swift in Sources */,
 				4192C280255D804D008E8BE1 /* Network.swift in Sources */,
 				4192C234255D71F9008E8BE1 /* ViewController.swift in Sources */,
 				4192C230255D71F9008E8BE1 /* AppDelegate.swift in Sources */,

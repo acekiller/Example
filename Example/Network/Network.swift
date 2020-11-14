@@ -13,6 +13,9 @@ final public class Network {
     private let timeoutInterval: TimeInterval
     private var tasks = [URLSessionTask]()
     private var successStatuscodes = Set<Int>([200, 201])
+
+    public var willRequest: ((URLRequest) -> Void)?
+
     static let `default` = Network(timeoutInterval: 10, baseURL: URL(string: "https://api.github.com"))
 
     init(timeoutInterval: TimeInterval, baseURL: URL?) {
@@ -46,6 +49,7 @@ final public class Network {
             failed(nil, "生成URLRequest失败")
             return
         }
+        willRequest?(request)
         let task = session.dataTask(with: request) { [weak self] in
             guard let strongSelf = self else {
                 return
@@ -91,7 +95,6 @@ final public class Network {
         guard let url = API.relative(relativePath).url(baseURL: baseURL) else {
             return nil
         }
-
         var request = URLRequest(url: url, cachePolicy: method.cachePolicy(), timeoutInterval: timeoutInterval)
         request.updateRequestParameters(method: method, parameter: parameter)
         return request

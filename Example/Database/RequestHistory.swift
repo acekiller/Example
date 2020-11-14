@@ -38,12 +38,12 @@ extension RequestHistory: TableCoding {
         return [keyColumn <- key, valueColumn <- value, createAtColumn <- Int64(Date().timeIntervalSince1970 * 1000)]
     }
 
-    static func keyValueRow(row: Row) -> KeyValue {
-        return KeyValue(key: row[KeyValue.keyColumn], value: row[KeyValue.valueColumn])
+    static func keyValueRow(row: Row) -> RequestHistory {
+        return RequestHistory(key: row[RequestHistory.keyColumn], value: row[RequestHistory.valueColumn])
     }
 
-    static func latest() -> Table {
+    static func allRecords() -> Table {
         let tbl = self.table
-        return tbl.select(keyColumn, valueColumn, createAtColumn.max).limit(1)
+        return tbl.order(createAtColumn.asc).select(keyColumn, valueColumn, createAtColumn)
     }
 }

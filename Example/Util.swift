@@ -18,7 +18,6 @@ func registerTable(create sql: () -> String) {
     _ = try? dataStore?.create(table: sql)
 }
 
-let defaultNetwork = Network.default
 let dataStore: DataStore? = {
     var dataDirectoryURL = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("database")
     if !FileManager.default.fileExists(atPath: dataDirectoryURL.path) {
@@ -53,3 +52,19 @@ func updateEndPointData(data: Data) {
     }
 }
 
+let defaultNetwork: Network = {
+    let net = Network.default
+    net.willRequest = {
+        let value = RequestHistory.encode(key: Date().description,
+                                          value: $0.url?.absoluteString ?? "")
+        var requestInfo = $0.url?.absoluteString ?? ""
+        requestInfo.append(" params [\n")
+        $0.allHTTPHeaderFields?.forEach {
+            requestInfo.append("\($0): \($1)\n")
+        }
+        requestInfo.append("]")
+        print("will save : \(requestInfo)")
+        _ = try? dataStore?.insert(value, into: RequestHistory.table)
+    }
+    return net
+}()

@@ -44,6 +44,6 @@ extension KeyValue: TableCoding {
 
     static func latest() -> Table {
         let tbl = self.table
-        return tbl.select(keyColumn, valueColumn, createAtColumn.max).limit(1)
+        return tbl.order(createAtColumn.desc).select(keyColumn, valueColumn).limit(1)
     }
 }
