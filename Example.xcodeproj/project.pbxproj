@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411747F6255EC68D004D4394 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411747F5255EC68D004D4394 /* DataStore.swift */; };
+		411747FC255ECE5A004D4394 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 411747FB255ECE5A004D4394 /* SQLite */; };
+		41174801255ECEBB004D4394 /* KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41174800255ECEBB004D4394 /* KeyValue.swift */; };
+		41174806255ECF30004D4394 /* TableCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41174805255ECF30004D4394 /* TableCoding.swift */; };
+		41174813255ED0FB004D4394 /* DataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41174812255ED0FB004D4394 /* DataStoreTests.swift */; };
 		4192C230255D71F9008E8BE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C22F255D71F9008E8BE1 /* AppDelegate.swift */; };
 		4192C232255D71F9008E8BE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C231255D71F9008E8BE1 /* SceneDelegate.swift */; };
 		4192C234255D71F9008E8BE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C233255D71F9008E8BE1 /* ViewController.swift */; };
@@ -15,6 +20,14 @@
 		4192C23C255D71FB008E8BE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4192C23A255D71FB008E8BE1 /* LaunchScreen.storyboard */; };
 		4192C247255D71FB008E8BE1 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C246255D71FB008E8BE1 /* ExampleTests.swift */; };
 		4192C252255D71FC008E8BE1 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C251255D71FC008E8BE1 /* ExampleUITests.swift */; };
+		4192C26F255D7A53008E8BE1 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C26E255D7A53008E8BE1 /* Timer.swift */; };
+		4192C274255D7BD7008E8BE1 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C273255D7BD7008E8BE1 /* TimerTests.swift */; };
+		4192C280255D804D008E8BE1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C27F255D804D008E8BE1 /* Network.swift */; };
+		4192C290255D82F5008E8BE1 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C28F255D82F5008E8BE1 /* NetworkTests.swift */; };
+		4192C295255D8350008E8BE1 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C294255D8350008E8BE1 /* APITests.swift */; };
+		41AF3B62255F3C4100EF58B5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3B61255F3C4100EF58B5 /* Util.swift */; };
+		41AF3B72255F528900EF58B5 /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3B71255F528900EF58B5 /* HistoryListViewController.swift */; };
+		41AF3B7F255F534200EF58B5 /* RequestHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3B7E255F534200EF58B5 /* RequestHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		411747F5255EC68D004D4394 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		41174800255ECEBB004D4394 /* KeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValue.swift; sourceTree = "<group>"; };
+		41174805255ECF30004D4394 /* TableCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCoding.swift; sourceTree = "<group>"; };
+		41174812255ED0FB004D4394 /* DataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreTests.swift; sourceTree = "<group>"; };
 		4192C22C255D71F9008E8BE1 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4192C22F255D71F9008E8BE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4192C231255D71F9008E8BE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,14 @@
 		4192C24D255D71FC008E8BE1 /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4192C251255D71FC008E8BE1 /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		4192C253255D71FC008E8BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4192C26E255D7A53008E8BE1 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		4192C273255D7BD7008E8BE1 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		4192C27F255D804D008E8BE1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4192C28F255D82F5008E8BE1 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		4192C294255D8350008E8BE1 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		41AF3B61255F3C4100EF58B5 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		41AF3B71255F528900EF58B5 /* HistoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListViewController.swift; sourceTree = "<group>"; };
+		41AF3B7E255F534200EF58B5 /* RequestHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411747FC255ECE5A004D4394 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +102,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		411747F4255EC654004D4394 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				411747F5255EC68D004D4394 /* DataStore.swift */,
+				41174800255ECEBB004D4394 /* KeyValue.swift */,
+				41174805255ECF30004D4394 /* TableCoding.swift */,
+				41AF3B7E255F534200EF58B5 /* RequestHistory.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		4192C223255D71F9008E8BE1 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +136,9 @@
 		4192C22E255D71F9008E8BE1 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				411747F4255EC654004D4394 /* Database */,
+				4192C27E255D8033008E8BE1 /* Network */,
+				4192C26D255D7A46008E8BE1 /* Timer */,
 				4192C22F255D71F9008E8BE1 /* AppDelegate.swift */,
 				4192C231255D71F9008E8BE1 /* SceneDelegate.swift */,
 				4192C233255D71F9008E8BE1 /* ViewController.swift */,
@@ -106,6 +146,8 @@
 				4192C238255D71FB008E8BE1 /* Assets.xcassets */,
 				4192C23A255D71FB008E8BE1 /* LaunchScreen.storyboard */,
 				4192C23D255D71FB008E8BE1 /* Info.plist */,
+				41AF3B61255F3C4100EF58B5 /* Util.swift */,
+				41AF3B71255F528900EF58B5 /* HistoryListViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -115,6 +157,10 @@
 			children = (
 				4192C246255D71FB008E8BE1 /* ExampleTests.swift */,
 				4192C248255D71FB008E8BE1 /* Info.plist */,
+				4192C273255D7BD7008E8BE1 /* TimerTests.swift */,
+				4192C28F255D82F5008E8BE1 /* NetworkTests.swift */,
+				4192C294255D8350008E8BE1 /* APITests.swift */,
+				41174812255ED0FB004D4394 /* DataStoreTests.swift */,
 			);
 			path = ExampleTests;
 			sourceTree = "<group>";
@@ -126,6 +172,22 @@
 				4192C253255D71FC008E8BE1 /* Info.plist */,
 			);
 			path = ExampleUITests;
+			sourceTree = "<group>";
+		};
+		4192C26D255D7A46008E8BE1 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				4192C26E255D7A53008E8BE1 /* Timer.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		4192C27E255D8033008E8BE1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4192C27F255D804D008E8BE1 /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +207,9 @@
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				411747FB255ECE5A004D4394 /* SQLite */,
+			);
 			productName = Example;
 			productReference = 4192C22C255D71F9008E8BE1 /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +281,9 @@
 				Base,
 			);
 			mainGroup = 4192C223255D71F9008E8BE1;
+			packageReferences = (
+				411747FA255ECE5A004D4394 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = 4192C22D255D71F9008E8BE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,9 +347,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41174806255ECF30004D4394 /* TableCoding.swift in Sources */,
+				41AF3B72255F528900EF58B5 /* HistoryListViewController.swift in Sources */,
+				4192C280255D804D008E8BE1 /* Network.swift in Sources */,
 				4192C234255D71F9008E8BE1 /* ViewController.swift in Sources */,
 				4192C230255D71F9008E8BE1 /* AppDelegate.swift in Sources */,
 				4192C232255D71F9008E8BE1 /* SceneDelegate.swift in Sources */,
+				4192C26F255D7A53008E8BE1 /* Timer.swift in Sources */,
+				411747F6255EC68D004D4394 /* DataStore.swift in Sources */,
+				41AF3B7F255F534200EF58B5 /* RequestHistory.swift in Sources */,
+				41174801255ECEBB004D4394 /* KeyValue.swift in Sources */,
+				41AF3B62255F3C4100EF58B5 /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4192C290255D82F5008E8BE1 /* NetworkTests.swift in Sources */,
+				41174813255ED0FB004D4394 /* DataStoreTests.swift in Sources */,
 				4192C247255D71FB008E8BE1 /* ExampleTests.swift in Sources */,
+				4192C295255D8350008E8BE1 /* APITests.swift in Sources */,
+				4192C274255D7BD7008E8BE1 /* TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		411747FA255ECE5A004D4394 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		411747FB255ECE5A004D4394 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 411747FA255ECE5A004D4394 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4192C224255D71F9008E8BE1 /* Project object */;
 }
