@@ -50,7 +50,9 @@ final public class Network {
             guard let strongSelf = self else {
                 return
             }
-            strongSelf.assignResponseData(result: ($0, $1, $2),
+            strongSelf.assignResponseData(data: $0,
+                                          response: $1,
+                                          error: $2,
                                           serialization: serialization,
                                           success: success,
                                           failed: failed)
@@ -59,27 +61,29 @@ final public class Network {
         task.resume()
     }
 
-    func assignResponseData<T>(result: (Data?, URLResponse?, Error?),
+    func assignResponseData<T>(data: Data?,
+                               response: URLResponse?,
+                               error: Error?,
                                serialization:@escaping (Data) -> T,
                                success: @escaping (T, HTTPURLResponse) -> Void,
                                failed: @escaping (URLResponse?, Error?) -> Void) {
         defer {
             tasks.removeAll { task in
-                return task.response == result.1
+                return task.response == response
             }
         }
 
-        if nil != result.2 {
-            failed(result.1, result.2)
+        if nil != error {
+            failed(response, error)
             return
         }
 
-        guard let resp = result.1 as? HTTPURLResponse, successStatuscodes.contains(resp.statusCode) else {
-            failed(result.1, result.2)
+        guard let resp = response as? HTTPURLResponse, successStatuscodes.contains(resp.statusCode) else {
+            failed(response, error)
             return
         }
 
-        let result = serialization(result.0 ?? Data())
+        let result = serialization(data ?? Data())
         success(result, resp)
     }
 
